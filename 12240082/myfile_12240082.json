@@ -1,0 +1,21 @@
+{
+  "name": "Nizamov Asilbek",
+  "age": 19,
+  "address": {
+    "street": "Dormitory 2, Inha University",
+    "city": "Incheon",
+    "postalCode": "12345"
+  },
+  "phoneNumbers": [
+    {
+      "type": "home",
+      "number": "123-456-7890"
+    },
+    {
+      "type": "work",
+      "number": "123-456-7891"
+    }
+  ],
+  "email": "nizamovasilbek@gmail.com",
+  "active": true
+}
