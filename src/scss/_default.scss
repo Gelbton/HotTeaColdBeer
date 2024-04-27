@@ -1,0 +1,68 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Inter;
+  font-weight: 500;
+}
+
+.main {
+  position: relative;
+}
+
+img,
+svg {
+  padding: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  max-height: 100%;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+fieldset,
+input {
+  margin: 0;
+  border: none;
+}
+
+input:is(:hover, :focus, :active) {
+  border: none;
+  outline: none;
+}
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}

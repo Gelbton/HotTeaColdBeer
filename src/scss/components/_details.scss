@@ -1,0 +1,17 @@
+.details {
+  position: fixed;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  left: -100%;
+  top: 0;
+  width: 540px;
+  height: 100%;
+  background: #ffffff;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  transition: .3s;
+
+  &.show {
+    left: 0;
+  }
+}
