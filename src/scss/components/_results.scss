@@ -54,7 +54,7 @@
       max-height: 300px;
       padding-right: 8px;
 
-      overflow-y: scroll;
+      overflow-y: auto;
       scrollbar-width: thin;
       scrollbar-color: #e85757 #a9d399b3;
     }
@@ -82,12 +82,19 @@
       display: flex;
       gap: 12px;
       align-items: center;
+      color: #303030;
+
+      svg {
+        min-width: fit-content;
+        max-width: 23px;
+      }
     }
 
     &-descr {
       display: flex;
       flex-direction: column;
       gap: 4px;
+      max-width: 300px;
 
       h3 {
         font-size: 20px;
@@ -105,6 +112,10 @@
       font-size: 20px;
       font-family: Gilroy;
       color: #303030;
+
+      p {
+        width: max-content;
+      }
     }
   }
 }
