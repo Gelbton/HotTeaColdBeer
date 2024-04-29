@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-import geocoding
+from graphhopper_api import geocoding
 
 app = Flask(__name__)
 
@@ -12,7 +12,7 @@ def get_route():
     to_city = request.args.get('to_city')
 
     # Call function to return route
-    return geocoding(transportation_type, from_city, to_city)
+    return jsonify(geocoding(transportation_type, from_city, to_city))
 
 # Homepage
 @app.route('/')

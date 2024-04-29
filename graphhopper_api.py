@@ -2,7 +2,7 @@ import requests
 import urllib.parse
 
 route_url = "https://graphhopper.com/api/1/route?"
-key = "graphhopper_key"
+key = "51749483-4608-47a6-9ec4-10f129122372"
 
 def geocoding(vehicle, to, destination):
     geocode_url = "https://graphhopper.com/api/1/geocode?"
@@ -17,7 +17,7 @@ def geocoding(vehicle, to, destination):
     json_data = replydata.json()
     json_status = replydata.status_code
 
-    if json_status == 200 and len(json_data["hits"]) != 0:
+    if json_status == 200:
         lat = json_data["hits"][0]["point"]["lat"]
         lng = json_data["hits"][0]["point"]["lng"]
         name = json_data["hits"][0]["name"]
