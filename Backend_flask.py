@@ -1,8 +1,9 @@
 from flask import Flask, request, jsonify
 from graphhopper_api import geocoding, get_route
+from flask_cors import CORS
 
 app = Flask(__name__)
-
+CORS(app)
 # Endpoint for getting the route data
 @app.route('/path', methods=['GET'])
 def get_path():
