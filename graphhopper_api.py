@@ -60,6 +60,9 @@ def get_route(vehicle, start, destination):
             "url": paths_url,
             "origin": orig_new_loc,
             "destination": dest_new_loc,
+            "sec": int(paths_data["paths"][0]["time"] / 1000 % 60),
+            "min": int(paths_data["paths"][0]["time"] / 1000 / 60 % 60),
+            "hr": int(paths_data["paths"][0]["time"] / 1000 / 60 / 60),
             "points": [{"lat": orig_lat, "long": orig_lng}, {"lat":dest_lat,"long":dest_lng}],
             "instructions": [],
         }
@@ -71,9 +74,6 @@ def get_route(vehicle, start, destination):
                     "path": path,
                     "distance_km": round(distance / 1000, 2),
                     "distance_miles": round(distance / 1000 / 1.61, 2),
-                    "sec": int(paths_data["paths"][0]["time"] / 1000 % 60),
-                    "min": int(paths_data["paths"][0]["time"] / 1000 / 60 % 60),
-                    "hr": int(paths_data["paths"][0]["time"] / 1000 / 60 / 60),
                 })
         else:
             route["error_message"] = paths_data["message"]
