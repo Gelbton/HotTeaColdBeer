@@ -67,7 +67,7 @@
 
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 20px;
       }
 
       tr {
@@ -84,9 +84,10 @@
       align-items: center;
       color: #303030;
 
-      svg {
-        min-width: fit-content;
-        max-width: 23px;
+      figure {
+        width: 25px;
+        max-height: 26px;
+        display: flex;
       }
     }
 
@@ -94,7 +95,7 @@
       display: flex;
       flex-direction: column;
       gap: 4px;
-      max-width: 300px;
+      max-width: 280px;
 
       h3 {
         font-size: 20px;
