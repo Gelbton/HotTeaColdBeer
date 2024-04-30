@@ -38,10 +38,10 @@ def geocoding(place):
         if json_status != 200:
             print("Geocode API status: " + str(json_status) + "\nError message: " + json_data["message"])
     return json_status, lat, lng, new_loc
+ 
+def get_route(vehicle, start, destination):
 
-def get_route(vehicle, to, destination):
-
-    orig_status, orig_lat, orig_lng, orig_new_loc = geocoding(to)
+    orig_status, orig_lat, orig_lng, orig_new_loc = geocoding(start)
     print("Geocoding API Status: " + str(orig_status))
     print("Starting Location: " + orig_new_loc)
 
@@ -70,7 +70,7 @@ def get_route(vehicle, to, destination):
                     "path": path,
                     "distance_km": distance / 1000,
                     "distance_miles": distance / 1000 / 1.61,
-                    "sec": int(paths_data["paths"][0]["time"]/1000%60),
+                    "sec":  int(paths_data["paths"][0]["time"]/1000%60),
                     "min": int(paths_data["paths"][0]["time"]/1000/60%60),
                     "hr": int(paths_data["paths"][0]["time"]/1000/60/60)
                 })
