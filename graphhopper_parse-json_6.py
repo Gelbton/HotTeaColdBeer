@@ -69,7 +69,10 @@ def get_route(vehicle, to, destination):
                 route["instructions"].append({
                     "path": path,
                     "distance_km": distance / 1000,
-                    "distance_miles": distance / 1000 / 1.61
+                    "distance_miles": distance / 1000 / 1.61,
+                    "sec": int(paths_data["paths"][0]["time"]/1000%60),
+                    "min": int(paths_data["paths"][0]["time"]/1000/60%60),
+                    "hr": int(paths_data["paths"][0]["time"]/1000/60/60)
                 })
         else:
             route["error_message"] = paths_data["message"]
