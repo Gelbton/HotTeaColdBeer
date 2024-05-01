@@ -1,0 +1,22 @@
+.details {
+  &__header {
+    padding: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 106px;
+    height: auto;
+  }
+
+  &__close {
+    width: 16px;
+    height: 16px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
