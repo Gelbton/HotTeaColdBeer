@@ -1,5 +1,5 @@
-from flask import Flask, request, jsonify
-from graphhopper_api import geocoding, get_route
+from flask import Flask, request
+from graphhopper_api import get_route
 from flask_cors import CORS
 
 app = Flask(__name__)
