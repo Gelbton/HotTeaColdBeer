@@ -11,10 +11,12 @@ To run this project, follow these steps:
 3. Install project dependencies:
    npm install
 
-4. Start the development server:
+4. Insert your API Key into the graphhopper_api.py file
+
+5. Start the development server:
    npm run dev
 
-5. Run the Flask backend:
+6. Run the Flask backend:
    python3 Backend_flask.py
 
 Once you've completed these steps, you should have the project up and running locally. You can then access it through your web browser or any other client application.
