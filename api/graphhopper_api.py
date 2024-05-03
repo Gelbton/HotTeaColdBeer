@@ -6,7 +6,7 @@ import urllib.parse
 route_url = "https://graphhopper.com/api/1/route?"
 
 # Insert your own key here
-key = "335611ac-82ff-414b-8ec4-3cfc21fff7c9"
+key = "INSERT KEY HERE"
 
 # Function to retrieve geolocation
 def geocoding(place):
